@@ -33,19 +33,10 @@ grace.manager = elon
 donald.manager = elon
 
 // send to training
-if (!alan.skills) {
-  alan.skills = []
-}
 alan.skills.push("Mathematics")
 
-if (!grace.skills) {
-  grace.skills = []
-}
 grace.skills.push("Cobol")
 
-if (!donald.skills) {
-  donald.skills = []
-}
 donald.skills.push("Computational Complexity")
 
 // whoops!  new person hired later on, do the same again for him
@@ -58,9 +49,6 @@ let new_hire = {
 let tim = new_hire
 tim.manager = elon
 
-if (!tim.skills) {
-  tim.skills = []
-}
 tim.skills.push("Protocols")
 
 

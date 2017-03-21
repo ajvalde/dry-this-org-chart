@@ -5,6 +5,11 @@ function Employee(name, gender, email, position, project, manager) {
   this.position = position
   this.project = project
   this.manager = manager
+  this.skills = []
+}
+
+Employee.prototype.addSkill = function(string){
+  this.skills.push(string)
 }
 
 let elon = new Employee("Elon Musk", "elon.musk@musky.com", "Boss")
@@ -12,9 +17,9 @@ let alan = new Employee("Alan Turing", "He", "alan.turing@musky.com", "Computer 
 let grace = new Employee("Grace Hopper", "She", "grace.hopper@musky.com", "Computer Scientist", "Compilers", elon)
 let donald = new Employee("Donald Knuth", "He" ,"donald.knuth@musky.com", "Mathematician", "Algorithm Analysis", elon)
 
-alan.skills = ["Mathematics"]
-grace.skills = ["Cobol"]
-donald.skills = ["Computational Complexity"]
+alan.addSkill("Mathematics")
+grace.addSkill("Cobol")
+donald.addSkill("Computational Complexity")
 
 let tim = new Employee("Tim Berners-Lee", "He", "tim.berners_lee@musky.com", "Computer Science", "Networks", elon)
 tim.skills = ["Protocols"]
